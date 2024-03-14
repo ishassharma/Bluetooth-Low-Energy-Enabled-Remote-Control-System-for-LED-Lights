@@ -1,0 +1,7 @@
+---
+label: "ecen5823-assignment2-ishassharmaa_2"
+quality: "unknown"
+project:
+- id: "main"
+  path: "ecen5823-assignment-ishassharmaa.slcp"
+  output: "."
