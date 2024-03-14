@@ -4,17 +4,26 @@ The system is a Bluetooth-enabled remote-control system for LED lights using Sil
 ## Keywords for Technologies/hardware used:
 Bluetooth Low Energy, Server, Client, LED, Keypad, GATT, State Machine, Power Management, GPIO, Energy profiling, Keypad sensor, Bluetooth module, LED strip driver, Blue Gecko Board, State Machine
 
-##Subsystem Summary
+## Subsystem Summary
 A.Keypad Input Processing Subsystem: Responsible for processing user input from the keypad on Board: Detects key presses and releases, translates them into corresponding data, and triggers Bluetooth
 notifications to inform Board 2 of the user's input.
+
 B.Bluetooth Communication Subsystem (Board 1): Manages the Bluetooth communication on Board 1. Utilizes the Bluetooth module to send notifications containing keypad input data to Board 2. Handles communication protocols and ensures secure and reliable data transmission.
+
 C. Bluetooth Communication Subsystem (Board 2): Manages the Bluetooth communication on Board 2. Utilizes the Bluetooth module to receive notifications from Board 1. Extracts keypad input data from notifications and forwards it to the LED Pattern Interpretation Subsystem.
+
 D. LED Pattern Interpretation Subsystem: Interprets the keypad input data received from Board 1. Determines the corresponding LED pattern based on the input. Controls the LED Strip Driver Subsystem to display the desired lighting pattern on the LED strip connected to Board 2. (this would depend a lot on which type of LED strip I choose to use, still undecided).
+
 E. LED Strip Driver Subsystem: Controls the LED strip connected to Board 2. Receives LED pattern data from the LED Pattern Interpretation Subsystem and adjusts the LED strip accordingly. Handles the low- level details of controlling individual LEDs or RGB segments. (this would depend a lot on which type of LED strip I choose to use, still undecided).
+
 F. Keypad Sensor Hardware Subsystem (Board 1): The physical hardware component on Board 1 that captures user input from the keypad. Converts physical key presses and releases into electrical signals for processing by the Keypad Input Processing Subsystem.
+
 G. Bluetooth Module Subsystem (Both Boards): Responsible for enabling Bluetooth communication between Board 1 and Board 2. Facilitates the wireless transfer of keypad input data and LED pattern notifications.
+
 H. Power Management Subsystem: Manages the power states of both boards to optimize energy consumption. Implements low-power modes during periods of inactivity and ensures efficient power usage for extended battery life.
-I. User Interface Subsystem (LCD Displays): Provides visual feedback to users through LCD displays on both Board 1 and Board 2. Displays relevant information such as keypad input on Board 1 and the current LED pattern on Board 2.
+
+I. User Interface Subsystem (LCD Displays): Provides visual feedback to users through LCDs on both Board 1 and Board 2. Displays relevant information such as keypad input on Board 1 and the current LED pattern on Board 2.
+
 J. System Control and Coordination Subsystem: Coordinates the overall system functionality. Manages the sequence of operations, ensures proper timing, and oversees the interaction between different subsystems to maintain a cohesive user experience.
 
 ## Key Learnings:
